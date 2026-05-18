@@ -16,7 +16,6 @@ const reverseString = (str: string): string => {
 
 //problem 3
 type StringOrNumber = string | number;
-
 const checkType = (user: StringOrNumber) => {
     if (typeof user === "string") {
         return ("String");
@@ -29,7 +28,6 @@ const checkType = (user: StringOrNumber) => {
 
 //problem 4
 const user = { id: 1, name: "John Doe", age: 21 };
-
 const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
     return obj[key];
 }
@@ -40,15 +38,15 @@ interface Book {
     author: string;
     publishedYear: number;
 }
-
 const myBook: Book = {
     title: "TypeScript Guide",
     author: "Jane Doe",
     publishedYear: 2024,
 };
 const toggleReadStatus = (obj: Book) => {
-    return { ...obj, isRead: true };
+    return { ...obj, isRead : true };
 }
+
 
 //problem 6
 class Person{
@@ -79,7 +77,7 @@ const student = new Student("Alice", 20, "A");
 const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [3, 4, 5, 6, 7];
 
-const getIntersection = (arr1  : number[], arr2 : number[] ) => {
+const getIntersection = (arr1  : number[], arr2 : number[] ): number[] => {
     const set2 = new Set(arr2);
     const existingElement = arr1.filter(e => set2.has(e))
     return existingElement;   
